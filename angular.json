@@ -94,7 +94,13 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/d3/d3.min.js",
+              "node_modules/nvd3/build/nv.d3.min.js" ,
+              "node_modules/chart.js/dist/Chart.min.js", 
+              "node_modules/d3/dist/d3.min.js", 
+              "node_modules/nvd3/build/nv.d3.min.js"
+            ]
           }
         },
         "lint": {
@@ -124,123 +130,82 @@
         }
       }
     },
-    "pie-chart": {
-      "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
-      "root": "projects/pie-chart",
-      "sourceRoot": "projects/pie-chart/src",
-      "prefix": "app",
+    "ngx-proxima": {
+      "projectType": "library",
+      "root": "projects/ngx-proxima",
+      "sourceRoot": "projects/ngx-proxima/src",
+      "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "outputPath": "dist/pie-chart",
-            "index": "projects/pie-chart/src/index.html",
-            "main": "projects/pie-chart/src/main.ts",
-            "polyfills": "projects/pie-chart/src/polyfills.ts",
-            "tsConfig": "projects/pie-chart/tsconfig.app.json",
-            "aot": true,
-            "assets": [
-              "projects/pie-chart/src/favicon.ico",
-              "projects/pie-chart/src/assets"
-            ],
-            "styles": [
-              "projects/pie-chart/src/styles.scss"
-            ],
-            "scripts": []
+            "tsConfig": "projects/ngx-proxima/tsconfig.lib.json",
+            "project": "projects/ngx-proxima/ng-package.json"
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "projects/pie-chart/src/environments/environment.ts",
-                  "with": "projects/pie-chart/src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
-                }
-              ]
+              "tsConfig": "projects/ngx-proxima/tsconfig.lib.prod.json"
             }
-          }
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "pie-chart:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "pie-chart:build:production"
-            }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "pie-chart:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/pie-chart/src/test.ts",
-            "polyfills": "projects/pie-chart/src/polyfills.ts",
-            "tsConfig": "projects/pie-chart/tsconfig.spec.json",
-            "karmaConfig": "projects/pie-chart/karma.conf.js",
-            "assets": [
-              "projects/pie-chart/src/favicon.ico",
-              "projects/pie-chart/src/assets"
-            ],
-            "styles": [
-              "projects/pie-chart/src/styles.scss"
-            ],
-            "scripts": []
+            "main": "projects/ngx-proxima/src/test.ts",
+            "tsConfig": "projects/ngx-proxima/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-proxima/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/pie-chart/tsconfig.app.json",
-              "projects/pie-chart/tsconfig.spec.json",
-              "projects/pie-chart/e2e/tsconfig.json"
+              "projects/ngx-proxima/tsconfig.lib.json",
+              "projects/ngx-proxima/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
             ]
           }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+        }
+      }
+    },
+    "ngx-proxima-showcase": {
+      "projectType": "library",
+      "root": "projects/ngx-proxima-showcase",
+      "sourceRoot": "projects/ngx-proxima-showcase/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "protractorConfig": "projects/pie-chart/e2e/protractor.conf.js",
-            "devServerTarget": "pie-chart:serve"
+            "tsConfig": "projects/ngx-proxima-showcase/tsconfig.lib.json",
+            "project": "projects/ngx-proxima-showcase/ng-package.json"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "pie-chart:serve:production"
+              "tsConfig": "projects/ngx-proxima-showcase/tsconfig.lib.prod.json"
             }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-proxima-showcase/src/test.ts",
+            "tsConfig": "projects/ngx-proxima-showcase/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-proxima-showcase/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-proxima-showcase/tsconfig.lib.json",
+              "projects/ngx-proxima-showcase/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }

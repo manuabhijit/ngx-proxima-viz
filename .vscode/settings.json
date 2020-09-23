@@ -1,0 +1,43 @@
+{
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true, // To be set to true
+  "gitlens.currentLine.enabled": true,
+  "gitlens.hovers.currentLine.over": "line",
+
+  // eslint extension options
+  "eslint.enable": true,
+  "editor.codeActionsOnSave": { "source.fixAll.eslint": true }, // To be set to true
+
+  // prettier extension setting
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "prettier.configPath": ".prettierrc.json",
+  "saveAndRun": {
+    "commands": [
+      {
+        "match": "/(.*)(polly-commons)([/])(assets)([/])(stylesheets)([/])(.*).scss",
+        "cmd": "npm run build:commons:styles",
+        "useShortcut": false,
+        "silent": false
+      },
+      {
+        "match": "/(.*)(polly-commons)([/])(src)([/])(.*)",
+        "cmd": "npm run build:commons",
+        "useShortcut": false,
+        "silent": false
+      }
+    ]
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true
+  }
+}

@@ -14,7 +14,33 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "donut-chart": [
+        "dist/donut-chart/donut-chart",
+        "dist/donut-chart"
+      ],
+      "pie-chart": [
+        "dist/pie-chart/pie-chart",
+        "dist/pie-chart"
+      ],
+      "bubble-chart": [
+        "dist/bubble-chart/bubble-chart",
+        "dist/bubble-chart"
+      ],
+      "bubble-radar": [
+        "dist/bubble-radar/bubble-radar",
+        "dist/bubble-radar"
+      ],
+      "ngx-proxima": [
+        "dist/ngx-proxima/ngx-proxima",
+        "dist/ngx-proxima"
+      ],
+      "ngx-proxima-showcase": [
+        "dist/ngx-proxima-showcase/ngx-proxima-showcase",
+        "dist/ngx-proxima-showcase"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
