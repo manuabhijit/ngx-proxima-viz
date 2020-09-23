@@ -6,8 +6,6 @@ import { PieChartComponent } from './proxima-pie-chart/pie-chart/pie-chart.compo
 @NgModule({
   declarations: [ProximaPieChartComponent, PieChartComponent],
   imports: [CommonModule],
-  exports: [ProximaPieChartComponent]
+  exports: [ProximaPieChartComponent],
 })
-export class ProximaPieChartModule { }
-
-export {ProximaPieChartComponent}
+export class ProximaPieChartModule {}
