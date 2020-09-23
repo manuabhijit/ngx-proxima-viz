@@ -1,4 +1,1 @@
-.nvd3-container {
-  width: 100%;
-  height: 1000px;
-}
+@import 'https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.3/nv.d3.min.css';

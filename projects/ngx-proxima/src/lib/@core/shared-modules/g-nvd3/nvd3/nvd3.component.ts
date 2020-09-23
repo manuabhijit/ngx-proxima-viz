@@ -31,11 +31,8 @@ export class Nvd3Component implements OnChanges, OnDestroy {
   }
 
   public initChart(options): void {
-    // Clearing
     this.clearNvd3ChartElement();
     if (!options) return;
-
-    console.log({ options });
 
     // Initialize chart with specific type
     this.chart = nv.models[options.chart.type]();
@@ -104,7 +101,7 @@ export class Nvd3Component implements OnChanges, OnDestroy {
     }
   }
 
-  public updateSize() {
+  public updateSize(): void {
     if (this.svg) {
       const height: string = isNaN(this.options.chart.height) ? '100%' : this.options.chart.height + 'px';
       const width: string = isNaN(this.options.chart.width) ? '100%' : this.options.chart.height + 'px';
@@ -113,7 +110,7 @@ export class Nvd3Component implements OnChanges, OnDestroy {
     }
   }
 
-  public configure(chart, options, chartType) {
+  public configure(chart, options, chartType): void {
     if (chart && options) {
       for (let key in chart) {
         if (!chart.hasOwnProperty(key)) continue;
@@ -147,11 +144,6 @@ export class Nvd3Component implements OnChanges, OnDestroy {
     }
   }
 
-  /**
-   * Configure dispatch events.
-   * @param dispatch
-   * @param options
-   */
   public configureEvents(dispatch, options) {
     if (dispatch && options) {
       for (let key in dispatch) {

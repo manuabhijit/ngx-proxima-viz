@@ -23,13 +23,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -87,18 +82,13 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss", "node_modules/nvd3/build/nv.d3.css"],
             "scripts": [
               "node_modules/d3/d3.min.js",
-              "node_modules/nvd3/build/nv.d3.min.js" ,
-              "node_modules/chart.js/dist/Chart.min.js", 
-              "node_modules/d3/dist/d3.min.js", 
+              "node_modules/nvd3/build/nv.d3.min.js",
+              "node_modules/chart.js/dist/Chart.min.js",
+              "node_modules/d3/dist/d3.min.js",
               "node_modules/nvd3/build/nv.d3.min.js"
             ]
           }
@@ -106,14 +96,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["tsconfig.app.json", "tsconfig.spec.json", "e2e/tsconfig.json"],
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -159,13 +143,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/ngx-proxima/tsconfig.lib.json",
-              "projects/ngx-proxima/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["projects/ngx-proxima/tsconfig.lib.json", "projects/ngx-proxima/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -199,13 +178,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "projects/ngx-proxima-showcase/tsconfig.lib.json",
-              "projects/ngx-proxima-showcase/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["projects/ngx-proxima-showcase/tsconfig.lib.json", "projects/ngx-proxima-showcase/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
