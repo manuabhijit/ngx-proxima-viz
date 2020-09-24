@@ -4,18 +4,14 @@ import { ProximaPieChartModule } from './proxima-pie-chart/proxima-pie-chart.mod
 
 @NgModule({
   declarations: [NgxProximaComponent],
-  imports: [
-    ProximaPieChartModule
-  ],
-  exports: [NgxProximaComponent]
+  imports: [ProximaPieChartModule],
+  exports: [NgxProximaComponent],
 })
-export class NgxProximaModule { 
-
+export class NgxProximaModule {
   public static forRoot(): ModuleWithProviders<NgxProximaModule> {
     return {
       ngModule: NgxProximaModule,
-      providers: [
-       ],
+      providers: [],
     };
   }
 }

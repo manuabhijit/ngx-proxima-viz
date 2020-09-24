@@ -2,6 +2,7 @@ import { Component, ElementRef, Input, OnChanges, OnDestroy, SimpleChanges } fro
 import * as d3 from 'd3';
 import * as nv from 'nvd3';
 import { NVD3_OPTIONS, NVD3_OPTIONS_2 } from '../@datasets/nvd3-options.dataset';
+import d3_save_svg from 'd3-save-svg';
 
 @Component({
   selector: 'lib-nvd3',
@@ -11,11 +12,16 @@ import { NVD3_OPTIONS, NVD3_OPTIONS_2 } from '../@datasets/nvd3-options.dataset'
 export class Nvd3Component implements OnChanges, OnDestroy {
   @Input() options: any;
   @Input() data: any;
+  @Input() public set saveChartAsSvgRequest(_) {
+    this.save();
+  }
 
   public el: HTMLElement;
   public chart: any;
   public chartType: string;
   public svg: any;
+
+  private isDownloadAble: boolean = false;
 
   constructor(elementRef: ElementRef) {
     this.el = elementRef.nativeElement;
@@ -36,6 +42,7 @@ export class Nvd3Component implements OnChanges, OnDestroy {
 
     // Initialize chart with specific type
     this.chart = nv.models[options.chart.type]();
+
     this.chartType = this.options.chart.type;
 
     // Generate random chart ID
@@ -53,6 +60,7 @@ export class Nvd3Component implements OnChanges, OnDestroy {
 
       return this.chart;
     }, options.chart['callback']);
+    nv.utils.windowResize(this.chart.update);
   }
 
   public updateWithOptions(options: any): void {
@@ -98,6 +106,7 @@ export class Nvd3Component implements OnChanges, OnDestroy {
 
       this.updateSize();
       this.svg.datum(data).call(this.chart);
+      this.isDownloadAble = true;
     }
   }
 
@@ -110,7 +119,7 @@ export class Nvd3Component implements OnChanges, OnDestroy {
     }
   }
 
-  public configure(chart, options, chartType): void {
+  public configure(chart, options, chartType: string): void {
     if (chart && options) {
       for (let key in chart) {
         if (!chart.hasOwnProperty(key)) continue;
@@ -163,6 +172,13 @@ export class Nvd3Component implements OnChanges, OnDestroy {
     if (nv.tooltip && nv.tooltip.cleanup) nv.tooltip.cleanup();
     if (this.chart && this.chart.resizeHandler) this.chart.resizeHandler.clear();
     this.chart = null;
+  }
+
+  save() {
+    var config = {
+      filename: 'chart',
+    };
+    if (this.isDownloadAble) d3_save_svg.save(this.svg.node(), config);
   }
 
   public ngOnDestroy(): void {

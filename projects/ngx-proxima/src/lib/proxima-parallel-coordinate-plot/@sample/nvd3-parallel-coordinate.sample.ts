@@ -1,7 +1,7 @@
 export const OPTIONS = {
   chart: {
     type: 'parallelCoordinates',
-    height: 800,
+    height: 450,
     margin: { top: 30, right: 0, bottom: 10, left: 0 },
     dimensions: ['economy', 'cylinders', 'displacement', 'power', 'weight', 's60', 'year'],
     dispatch: {},
@@ -23,7 +23,7 @@ export const OPTIONS = {
     dimensionNames: ['economy', 'cylinders', 'displacement', 'power', 'weight', 's60', 'year'],
     dimensionFormats: [null, null, null, null, null, null, null],
   },
-  title: { enable: false, text: 'Write Your Title', className: 'h4', css: { width: 'nullpx', textAlign: 'center' } },
+  title: { text: 'Write Your Title', className: 'h4', css: { width: 'nullpx', textAlign: 'center' } },
   subtitle: { enable: false, text: 'Write Your Subtitle', css: { width: 'nullpx', textAlign: 'center' } },
   caption: { enable: false, text: 'Figure 1. Write Your Caption text.', css: { width: 'nullpx', textAlign: 'center' } },
   styles: { classes: { 'with-3d-shadow': true, 'with-transitions': true, gallery: false }, css: {} },

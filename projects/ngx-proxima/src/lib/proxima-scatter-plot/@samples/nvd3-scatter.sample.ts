@@ -1,8 +1,13 @@
+import { COLOR_PALLET } from './../../@core/datasets/color.dataset';
+import { ERR_404 } from '../../@core/datasets/ui-messages.dataset';
+
 export const OPTIONS = {
   chart: {
     type: 'scatterChart',
     height: 500,
-    color: ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf'],
+    color: (_, i) => {
+      return COLOR_PALLET.random[i % 10];
+    },
     scatter: {
       onlyCircles: false,
       dispatch: {},
@@ -22,7 +27,7 @@ export const OPTIONS = {
       padData: false,
       clipEdge: false,
       clipVoronoi: true,
-      showVoronoi: false,
+      showVoronoi: true,
       id: 82099,
       interactiveUpdateDelay: 300,
       showLabels: false,
@@ -75,13 +80,14 @@ export const OPTIONS = {
       domain: [0, 1],
       range: [0, 1],
     },
+
     zoom: {
       enabled: true,
       scaleExtent: [1, 10],
       useFixedDomain: false,
       useNiceScale: false,
       horizontalOff: false,
-      verticalOff: false,
+      verticalOff: true,
       unzoomEventType: 'dblclick.zoom',
     },
     dispatch: {},
@@ -117,7 +123,6 @@ export const OPTIONS = {
       data: null,
       id: 'nvtooltip-46025',
     },
-    width: null,
     xDomain: null,
     yDomain: null,
     pointDomain: null,
@@ -135,15 +140,16 @@ export const OPTIONS = {
     showVoronoi: false,
     interactiveUpdateDelay: 300,
     showLabels: false,
-    margin: { top: 30, right: 20, bottom: 50, left: 75 },
+    margin: { top: 40, right: 40, bottom: 50, left: 70 },
     useVoronoi: true,
     container: null,
     showLegend: true,
     showXAxis: true,
     showYAxis: true,
     defaultState: null,
-    noData: null,
+    noData: ERR_404,
     rightAlignYAxis: false,
+    pointActive: (d) => d.shape !== 'triangle-up',
   },
   title: { enable: false, text: 'Write Your Title', className: 'h4', css: { width: 'nullpx', textAlign: 'center' } },
   subtitle: { enable: false, text: 'Write Your Subtitle', css: { width: 'nullpx', textAlign: 'center' } },
@@ -151,7 +157,7 @@ export const OPTIONS = {
   styles: { classes: { 'with-3d-shadow': true, 'with-transitions': true, gallery: false }, css: {} },
 };
 
-export const DATA = generateData(4, 4);
+export const DATA = generateData(7, 10);
 
 function generateData(groups, points) {
   let data = [];
