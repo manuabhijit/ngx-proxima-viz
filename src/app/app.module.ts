@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { ProximaDirectedGraphModule } from 'projects/ngx-proxima/src/lib/proxima-directed-graph/proxima-directed-graph.module';
 import { ProximaBoxPlotModule } from 'projects/ngx-proxima/src/lib/proxima-box-plot/proxima-box-plot.module';
 import { ProximaCumulativeLineChartModule } from 'projects/ngx-proxima/src/lib/proxima-cumulative-line-chart/proxima-cumulative-line-chart.module';
+import { ProximaDonutChartModule } from 'projects/ngx-proxima/src/lib/proxima-donut-chart/proxima-donut-chart.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,6 +20,7 @@ import { ProximaCumulativeLineChartModule } from 'projects/ngx-proxima/src/lib/p
     AppRoutingModule,
 
     ProximaBoxPlotModule,
+    ProximaDonutChartModule,
     ProximaScatterPlotModule,
     ProximaSunburstChartModule,
     ProximaStackareaChartModule,
