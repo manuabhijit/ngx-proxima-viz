@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { TriggerHelperUtility } from '../../@core/helpers/trigger-helpers.utility';
-import { OPTIONS, DATA } from '../@samples/sample.dataset';
+import { OPTIONS, DATA } from '../@sample/nvd3-box-plot.sample';
 
 @Component({
-  selector: 'proxima-pie-chart',
-  templateUrl: './proxima-pie-chart.component.html',
-  styleUrls: ['./proxima-pie-chart.component.scss'],
+  selector: 'proxima-proxima-box-plot',
+  templateUrl: './proxima-box-plot.component.html',
+  styleUrls: ['./proxima-box-plot.component.css'],
 })
-export class ProximaPieChartComponent implements OnInit {
+export class ProximaBoxPlotComponent implements OnInit {
   public options;
   public data;
 
@@ -15,7 +15,7 @@ export class ProximaPieChartComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.options = OPTIONS;
     this.data = DATA;
   }

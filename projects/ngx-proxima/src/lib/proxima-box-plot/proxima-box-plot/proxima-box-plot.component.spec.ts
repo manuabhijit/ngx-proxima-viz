@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PieChartComponent } from './pie-chart.component';
+import { ProximaBoxPlotComponent } from './proxima-box-plot.component';
 
-describe('PieChartComponent', () => {
-  let component: PieChartComponent;
-  let fixture: ComponentFixture<PieChartComponent>;
+describe('ProximaBoxPlotComponent', () => {
+  let component: ProximaBoxPlotComponent;
+  let fixture: ComponentFixture<ProximaBoxPlotComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PieChartComponent ]
+      declarations: [ ProximaBoxPlotComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PieChartComponent);
+    fixture = TestBed.createComponent(ProximaBoxPlotComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

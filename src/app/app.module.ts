@@ -9,6 +9,8 @@ import { ProximaSunburstChartModule } from 'projects/ngx-proxima/src/lib/proxima
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProximaDirectedGraphModule } from 'projects/ngx-proxima/src/lib/proxima-directed-graph/proxima-directed-graph.module';
+import { ProximaBoxPlotModule } from 'projects/ngx-proxima/src/lib/proxima-box-plot/proxima-box-plot.module';
+import { ProximaCumulativeLineChartModule } from 'projects/ngx-proxima/src/lib/proxima-cumulative-line-chart/proxima-cumulative-line-chart.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,11 +18,14 @@ import { ProximaDirectedGraphModule } from 'projects/ngx-proxima/src/lib/proxima
     BrowserModule,
     AppRoutingModule,
 
+    ProximaBoxPlotModule,
     ProximaScatterPlotModule,
     ProximaSunburstChartModule,
     ProximaStackareaChartModule,
     ProximaDirectedGraphModule,
+
     ProximaCandlestickChartModule,
+    ProximaCumulativeLineChartModule,
     ProximaParallelCoordinatePlotModule,
 
     ProximaPieChartModule,
