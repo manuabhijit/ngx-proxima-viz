@@ -80,7 +80,6 @@ export const OPTIONS = {
       domain: [0, 1],
       range: [0, 1],
     },
-
     zoom: {
       enabled: true,
       scaleExtent: [1, 10],

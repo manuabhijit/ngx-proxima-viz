@@ -90,33 +90,4 @@ export const OPTIONS = {
   styles: { classes: { 'with-3d-shadow': true, 'with-transitions': true, gallery: false }, css: {} },
 };
 
-export const DATA: any[] = [
-  {
-    key: 'One',
-    value: 5,
-  },
-  {
-    key: 'Two',
-    value: 2,
-  },
-  {
-    key: 'Three',
-    value: 9,
-  },
-  {
-    key: 'Four',
-    value: 7,
-  },
-  {
-    key: 'Five',
-    value: 4,
-  },
-  {
-    key: 'Six',
-    value: 3,
-  },
-  {
-    key: 'Seven',
-    value: 10.5,
-  },
-];
+export const DATA: any[] = ['A', 'B', 'C', 'D'].map((key) => ({ key, value: Math.random() * 10 }));
