@@ -12,6 +12,10 @@ import d3_save_svg from 'd3-save-svg';
 export class Nvd3Component implements OnChanges, OnDestroy {
   @Input() options: any;
   @Input() data: any;
+  @Input() public set redraw(_) {
+    this.initChart(this.options);
+  }
+
   @Input() public set saveChartAsSvgRequest(_) {
     this.save();
   }
