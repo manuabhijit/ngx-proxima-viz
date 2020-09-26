@@ -1,2 +1,2 @@
-export { ProximaBoxPlotModule } from './lib/proxima-box-plot/proxima-box-plot.module';
-export { ProximaBoxPlotComponent } from './lib/proxima-box-plot/proxima-box-plot/proxima-box-plot.component';
+export { ProximaHistogramBarChartModule } from './lib/proxima-histogram-bar-chart/proxima-histogram-bar-chart.module';
+export { ProximaHistogramBarChartComponent } from './lib/proxima-histogram-bar-chart/proxima-histogram-bar-chart/proxima-histogram-bar-chart.component';

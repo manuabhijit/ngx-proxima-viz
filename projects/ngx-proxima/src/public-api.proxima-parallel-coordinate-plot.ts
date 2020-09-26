@@ -1,2 +1,2 @@
-export { ProximaBoxPlotModule } from './lib/proxima-box-plot/proxima-box-plot.module';
-export { ProximaBoxPlotComponent } from './lib/proxima-box-plot/proxima-box-plot/proxima-box-plot.component';
+export { ProximaParallelCoordinatePlotModule } from './lib/proxima-parallel-coordinate-plot/proxima-parallel-coordinate-plot.module';
+export { ProximaParallelCoordinatePlotComponent } from './lib/proxima-parallel-coordinate-plot/proxima-parallel-coordinate-plot/proxima-parallel-coordinate-plot.component';

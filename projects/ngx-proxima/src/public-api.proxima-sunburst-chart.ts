@@ -1,2 +1,2 @@
-export { ProximaBoxPlotModule } from './lib/proxima-box-plot/proxima-box-plot.module';
-export { ProximaBoxPlotComponent } from './lib/proxima-box-plot/proxima-box-plot/proxima-box-plot.component';
+export { ProximaSunburstChartModule } from './lib/proxima-sunburst-chart/proxima-sunburst-chart.module';
+export { ProximaSunburstChartComponent } from './lib/proxima-sunburst-chart/proxima-sunburst-chart/proxima-sunburst-chart.component';
