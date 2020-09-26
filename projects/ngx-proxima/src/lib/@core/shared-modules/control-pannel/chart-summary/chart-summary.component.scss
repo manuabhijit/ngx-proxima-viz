@@ -1,0 +1,26 @@
+.chart-summary {
+  margin-bottom: 2rem;
+  .caption {
+    .text {
+      margin: 0;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+  }
+
+  .title {
+    .text {
+      font-weight: bold;
+      margin: 0;
+      font-size: 0.6rem;
+    }
+  }
+
+  .subtitle {
+    padding-left: 1rem;
+    .text {
+      margin: 0;
+      font-size: 0.6rem;
+    }
+  }
+}

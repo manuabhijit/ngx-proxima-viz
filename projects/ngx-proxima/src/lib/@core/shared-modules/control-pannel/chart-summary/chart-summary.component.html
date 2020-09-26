@@ -1,11 +1,11 @@
-<div class="row">
-  <div *ngIf="caption" class="col-12 text-center">
-    <p>{{ caption.text }}</p>
+<div class="chart-summary row">
+  <div *ngIf="caption && caption.enable" class="caption col-12 text-center">
+    <p class="text">{{ caption.text }}</p>
   </div>
-  <div *ngIf="title" class="col-12">
-    <p>{{title.text}}</p>
+  <div *ngIf="title && title.enable" class="title col-12">
+    <p class="text">{{title.text}}</p>
   </div>
-  <div *ngIf="subtitle" class="col-12">
-    <p>{{subtitle.text}}</p>
+  <div *ngIf="subtitle && subtitle.enable" class="subtitle col-12">
+    <p class="text">{{subtitle.text}}</p>
   </div>
 </div>
