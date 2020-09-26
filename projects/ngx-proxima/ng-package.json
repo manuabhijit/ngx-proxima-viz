@@ -1,7 +1,16 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/ngx-proxima",
+  "deleteDestPath": true,
   "lib": {
-    "entryFile": "src/public-api.ts"
-  }
+    "entryFile": "src/public-api.ts",
+    "umdModuleIds": {
+      "color-scheme": "ColorScheme",
+      "d3": "d3",
+      "lodash-es": "lodashEs",
+      "nvd3": "nv",
+      "d3-save-svg": "d3-save-svg"
+    }
+  },
+  "whitelistedNonPeerDependencies": ["d3", "jsonschema", "lodash-es", "nvd3", "primeicons", "primeng", "rxjs"]
 }
