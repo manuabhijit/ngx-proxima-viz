@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/ngx-proxima/proxima-box-plot",
+  "deleteDestPath": true,
+  "lib": {
+    "entryFile": "./../../public-api.proxima-pie-chart.ts",
+    "umdModuleIds": {
+      "color-scheme": "ColorScheme",
+      "d3": "d3",
+      "lodash-es": "lodashEs",
+      "nvd3": "nv",
+      "d3-save-svg": "d3-save-svg"
+    }
+  }
+}
