@@ -3,7 +3,7 @@
   "dest": "../../dist/ngx-proxima/proxima-box-plot",
   "deleteDestPath": true,
   "lib": {
-    "entryFile": "./../public-api.proxima-box-plot.ts",
+    "entryFile": "./../../public-api.proxima-box-plot.ts",
     "umdModuleIds": {
       "color-scheme": "ColorScheme",
       "d3": "d3",
