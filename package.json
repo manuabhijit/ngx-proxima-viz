@@ -30,6 +30,7 @@
     "d3-save-svg": "0.0.2",
     "d3-scale": "^3.2.2",
     "d3-zoom": "^2.0.0",
+    "jsonschema": "^1.2.7",
     "lodash-es": "^4.17.15",
     "nvd3": "^1.8.6",
     "primeicons": "^4.0.0",
