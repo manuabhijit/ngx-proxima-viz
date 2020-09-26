@@ -1,6 +1,7 @@
 <div class="nvd3-container" #nvd3Containter>
   <proxima-quick-action-controls (saveGraphAsSvg)="triggerUtility.saveGraphAsSvg()"></proxima-quick-action-controls>
-  <lib-nvd3 [data]="data" [options]="options" [saveChartAsSvgRequest]="triggerUtility.downloadChartAsSvgCount">
+  <lib-nvd3 [data]="data" [redraw]="triggerUtility.redrawCount" [options]="options"
+    [saveChartAsSvgRequest]="triggerUtility.downloadChartAsSvgCount">
   </lib-nvd3>
   <proxima-chart-summary [subtitle]="options.subtitle" [title]="options.title" [caption]="options.caption">
   </proxima-chart-summary>
