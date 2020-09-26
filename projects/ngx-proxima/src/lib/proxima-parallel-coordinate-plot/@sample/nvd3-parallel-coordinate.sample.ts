@@ -1,3 +1,5 @@
+import { SAMPLE_CHART_SUMMARY } from '../../@core/datasets/chart-summary.dataset';
+
 export const OPTIONS = {
   chart: {
     type: 'parallelCoordinates',
@@ -23,10 +25,7 @@ export const OPTIONS = {
     dimensionNames: ['economy', 'cylinders', 'displacement', 'power', 'weight', 's60', 'year'],
     dimensionFormats: [null, null, null, null, null, null, null],
   },
-  title: { text: 'Write Your Title', className: 'h4', css: { width: 'nullpx', textAlign: 'center' } },
-  subtitle: { enable: false, text: 'Write Your Subtitle', css: { width: 'nullpx', textAlign: 'center' } },
-  caption: { enable: false, text: 'Figure 1. Write Your Caption text.', css: { width: 'nullpx', textAlign: 'center' } },
-  styles: { classes: { 'with-3d-shadow': true, 'with-transitions': true, gallery: false }, css: {} },
+  ...SAMPLE_CHART_SUMMARY,
 };
 
 export const DATA: any[] = generate(250);

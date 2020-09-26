@@ -1,5 +1,6 @@
 import { COLOR_PALLET } from './../../@core/datasets/color.dataset';
 import { ERR_404 } from '../../@core/datasets/ui-messages.dataset';
+import { SAMPLE_CHART_SUMMARY } from '../../@core/datasets/chart-summary.dataset';
 
 export const OPTIONS = {
   chart: {
@@ -23,14 +24,14 @@ export const OPTIONS = {
       forceY: [],
       forcePoint: [],
       interactive: true,
-      padDataOuter: 0.1,
+      padDataOuter: 0,
       padData: false,
       clipEdge: false,
       clipVoronoi: true,
       showVoronoi: true,
       id: 82099,
-      interactiveUpdateDelay: 300,
-      showLabels: false,
+      interactiveUpdateDelay: 0,
+      showLabels: true,
       margin: { top: 0, right: 0, bottom: 0, left: 0 },
       duration: 500,
       useVoronoi: true,
@@ -137,7 +138,7 @@ export const OPTIONS = {
     clipEdge: false,
     clipVoronoi: true,
     showVoronoi: false,
-    interactiveUpdateDelay: 300,
+    interactiveUpdateDelay: 0,
     showLabels: false,
     margin: { top: 40, right: 40, bottom: 50, left: 70 },
     useVoronoi: true,
@@ -148,27 +149,21 @@ export const OPTIONS = {
     defaultState: null,
     noData: ERR_404,
     rightAlignYAxis: false,
-    pointActive: (d) => d.shape !== 'triangle-up',
+    // pointActive: (d) => d.shape !== 'triangle-up',
   },
-  title: { enable: false, text: 'Write Your Title', className: 'h4', css: { width: 'nullpx', textAlign: 'center' } },
-  subtitle: { enable: false, text: 'Write Your Subtitle', css: { width: 'nullpx', textAlign: 'center' } },
-  caption: { enable: false, text: 'Figure 1. Write Your Caption text.', css: { width: 'nullpx', textAlign: 'center' } },
-  styles: { classes: { 'with-3d-shadow': true, 'with-transitions': true, gallery: false }, css: {} },
+  ...SAMPLE_CHART_SUMMARY,
 };
 
 export const DATA = generateData(7, 10);
 
-function generateData(groups, points) {
+function generateData(groups: number, points: number) {
   let data = [];
-  let shapes = ['circle', 'cross', 'triangle-up', 'triangle-down', 'diamond', 'square'];
+  let shapes = ['circle', 'circle', 'triangle-up', 'triangle-down', 'diamond', 'square'];
 
-  for (var i = 0; i < groups; i++) {
-    data.push({
-      key: 'Group ' + (i + 1),
-      values: [],
-    });
+  for (let i = 0; i < groups; i++) {
+    data.push({ key: 'Group ' + (i + 1), values: [] });
 
-    for (var j = 0; j < points; j++) {
+    for (let j = 0; j < points; j++) {
       data[i].values.push({
         x: Math.floor(Math.random() * 100),
         y: Math.floor(Math.random() * 100),

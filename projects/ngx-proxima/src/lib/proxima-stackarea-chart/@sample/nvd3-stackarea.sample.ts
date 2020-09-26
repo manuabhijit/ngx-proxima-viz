@@ -1,3 +1,6 @@
+import { Point } from '../../@core/interfaces/point.interface';
+import { SAMPLE_CHART_SUMMARY } from '../../@core/datasets/chart-summary.dataset';
+
 export const OPTIONS = {
   chart: {
     type: 'stackedAreaChart',
@@ -10,7 +13,7 @@ export const OPTIONS = {
     },
     x: (d) => d.x,
     y: (d) => d.y,
-    useVoronoi: false,
+    useVoronoi: true,
     clipEdge: true,
     duration: 100,
     useInteractiveGuideline: true,
@@ -28,10 +31,7 @@ export const OPTIONS = {
       unzoomEventType: 'dblclick.zoom',
     },
   },
-  title: { enable: false, text: 'Write Your Title', className: 'h4', css: { width: 'nullpx', textAlign: 'center' } },
-  subtitle: { enable: false, text: 'Write Your Subtitle', css: { width: 'nullpx', textAlign: 'center' } },
-  caption: { enable: false, text: 'Figure 1. Write Your Caption text.', css: { width: 'nullpx', textAlign: 'center' } },
-  styles: { classes: { 'with-3d-shadow': true, 'with-transitions': true, gallery: false }, css: {} },
+  ...SAMPLE_CHART_SUMMARY,
 };
 
 export const DATA: any[] = [
@@ -70,8 +70,8 @@ export const DATA: any[] = [
   },
 ];
 
-function generate(count: number): any[] {
-  let arr: any[] = [];
+function generate(count: number): Point[] {
+  let arr: Point[] = [];
   for (let i = 0; i < count; i++) arr.push({ x: i * 10, y: Math.round(Math.random() * 10 + 5) });
   return arr;
 }

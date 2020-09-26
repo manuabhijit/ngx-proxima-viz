@@ -1,6 +1,7 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { OPTIONS, DATA } from '../@samples/nvd3-scatter.sample';
 import { TriggerHelperUtility } from '../../@core/helpers/trigger-helpers.utility';
+import { cloneDeep } from 'lodash-es';
 
 @Component({
   selector: 'proxima-scatter-plot',
@@ -10,18 +11,15 @@ import { TriggerHelperUtility } from '../../@core/helpers/trigger-helpers.utilit
 export class ProximaScatterPlotComponent implements OnInit {
   @ViewChild('nvd3Containter') public nvd3Containter: ElementRef | undefined;
 
+  protected readonly chartType: string = 'scatterChart';
+
   public options;
   public data;
 
   public readonly triggerUtility: TriggerHelperUtility = new TriggerHelperUtility();
 
   ngOnInit() {
-    setInterval(() => {
-      console.log({ nvd3Containter: this.nvd3Containter });
-    }, 2000);
-
-    this.options = OPTIONS;
-
-    this.data = DATA;
+    this.data = cloneDeep(DATA);
+    this.options = cloneDeep(OPTIONS);
   }
 }

@@ -1,3 +1,5 @@
+import { SAMPLE_CHART_SUMMARY } from '../../@core/datasets/chart-summary.dataset';
+
 export const OPTIONS = {
   chart: {
     type: 'forceDirectedGraph',
@@ -16,6 +18,7 @@ export const OPTIONS = {
           .style('font-size', '10px');
     },
   },
+  ...SAMPLE_CHART_SUMMARY,
 };
 
 export const DATA = {

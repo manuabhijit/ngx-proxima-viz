@@ -1,3 +1,5 @@
+import { SAMPLE_CHART_SUMMARY } from '../../@core/datasets/chart-summary.dataset';
+
 export const OPTIONS = {
   chart: {
     type: 'candlestickBarChart',
@@ -34,6 +36,7 @@ export const OPTIONS = {
       unzoomEventType: 'dblclick.zoom',
     },
   },
+  ...SAMPLE_CHART_SUMMARY,
 };
 
 export const DATA: any[] = [

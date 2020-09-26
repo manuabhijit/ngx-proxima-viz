@@ -1,9 +1,12 @@
+import { SAMPLE_CHART_SUMMARY } from '../../@core/datasets/chart-summary.dataset';
+
 export const OPTIONS = {
   chart: {
     type: 'sunburstChart',
     height: 450,
     duration: 250,
   },
+  ...SAMPLE_CHART_SUMMARY,
 };
 
 export const DATA = [

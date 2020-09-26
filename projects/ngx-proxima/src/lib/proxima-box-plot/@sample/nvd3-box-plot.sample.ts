@@ -1,9 +1,12 @@
+import { COLOR_PALLET } from '../../@core/datasets/color.dataset';
+import { SAMPLE_CHART_SUMMARY } from '../../@core/datasets/chart-summary.dataset';
+
 export const OPTIONS = {
   chart: {
     type: 'boxPlotChart',
     height: 450,
     margin: { top: 20, right: 20, bottom: 30, left: 50 },
-    color: ['darkblue', 'darkorange', 'green', 'darkred', 'darkviolet'],
+    color: (_, i) => COLOR_PALLET.random[(i % COLOR_PALLET.random.length) - 1],
     maxBoxWidth: 55,
     yDomain: [0, 500],
     dispatch: {},
@@ -20,7 +23,7 @@ export const OPTIONS = {
     xAxis: {
       dispatch: {},
       axisLabelDistance: 0,
-      staggerLabels: false,
+      staggerLabels: true,
       rotateLabels: 0,
       rotateYLabel: true,
       showMaxMin: false,
@@ -84,10 +87,7 @@ export const OPTIONS = {
     noData: 'No Data Available.',
     rightAlignYAxis: false,
   },
-  title: { enable: false, text: 'Write Your Title', className: 'h4', css: { width: 'nullpx', textAlign: 'center' } },
-  subtitle: { enable: false, text: 'Write Your Subtitle', css: { width: 'nullpx', textAlign: 'center' } },
-  caption: { enable: false, text: 'Figure 1. Write Your Caption text.', css: { width: 'nullpx', textAlign: 'center' } },
-  styles: { classes: { 'with-3d-shadow': true, 'with-transitions': true, gallery: false }, css: {} },
+  ...SAMPLE_CHART_SUMMARY,
 };
 
 export const DATA: any[] = [
@@ -110,7 +110,7 @@ export const DATA: any[] = [
       Q3: 400,
       whisker_low: 225,
       whisker_high: 425,
-      outliers: [175, 450, 480],
+      outliers: [275, 450, 480],
     },
   },
   {
