@@ -5,7 +5,7 @@ import { NVD3_OPTIONS, NVD3_OPTIONS_2 } from '../@datasets/nvd3-options.dataset'
 import d3_save_svg from 'd3-save-svg';
 
 @Component({
-  selector: 'lib-nvd3',
+  selector: 'proxima-nvd3',
   template: '',
   styleUrls: ['./nvd3.component.css'],
 })
