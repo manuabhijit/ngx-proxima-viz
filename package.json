@@ -7,7 +7,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "proxima:prod": "rm -rf ./dist/ngx-proxima && ng build ngx-proxima --prod",
+    "proxima:publish": "cd ./dist/ngx-proxima/ && npm publish",
+    "proxima:prod:publish": "npm run proxima:prod && proxima:publish"
   },
   "private": true,
   "dependencies": {
