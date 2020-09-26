@@ -21,7 +21,7 @@ export class ProximaChart implements OnInit {
   }
 
   constructor() {
-    this.showCaseColors();
+    // this.showCaseColors();
   }
 
   private showCaseColors() {
