@@ -5,6 +5,11 @@
     "@angular/common": "^10.1.2",
     "@angular/core": "^10.1.2"
   },
+  "license": "Proxima Commercial",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manuabhijit/ngx-proxima-viz"
+  },
   "dependencies": {
     "tslib": "^2.0.0",
     "d3": "^6.2.0",
